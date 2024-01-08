@@ -1,0 +1,137 @@
+User Collection:
+----------------
+{
+  "_id": ObjectId("user1"),
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "codekata_solved": 5,
+  "mentee_count": 10
+},
+{
+  "_id": ObjectId("user2"),
+  "name": "Alice Smith",
+  "email": "alice.smith@example.com",
+  "codekata_solved": 12,
+  "mentee_count": 20
+},
+// ... (up to 20 users)
+
+
+
+codekata Collection:
+--------------------
+{
+  "_id": ObjectId("codekata1"),
+  "user_id": ObjectId("user1"),
+  "problems_solved": 8
+},
+{
+  "_id": ObjectId("codekata2"),
+  "user_id": ObjectId("user2"),
+  "problems_solved": 15
+},
+// ... (up to 20 codekata records)
+
+
+
+Attendance Collection:
+----------------------
+{
+  "_id": ObjectId("attendance1"),
+  "user_id": ObjectId("user1"),
+  "date": ISODate("2020-10-10T00:00:00Z"),
+  "status": "present"
+},
+{
+  "_id": ObjectId("attendance2"),
+  "user_id": ObjectId("user2"),
+  "date": ISODate("2020-10-10T00:00:00Z"),
+  "status": "absent"
+},
+// ... (up to 20 attendance records)
+
+
+
+Topics Collection:
+------------------
+{
+  "_id": ObjectId("topic1"),
+  "name": "Introduction to React Js"
+},
+{
+  "_id": ObjectId("topic2"),
+  "name": "React Components"
+},
+// ... (up to 20 topics)
+
+
+
+Task Collection:
+----------------
+{
+  "_id": ObjectId("task1"),
+  "user_id": ObjectId("user1"),
+  "topic_id": ObjectId("topic1"),
+  "submission_date": ISODate("2020-10-15T00:00:00Z"),
+  "submitted": true
+},
+{
+  "_id": ObjectId("task2"),
+  "user_id": ObjectId("user2"),
+  "topic_id": ObjectId("topic2"),
+  "sgubmission_date": ISODate("2020-10-20T00:00:00Z"),
+  "submitted": false
+},
+// ... (up to 20 tasks)
+
+
+
+CompanyDrive Collection:
+------------------------
+{
+  "_id": ObjectId("drive1"),
+  "name": "Tech Company Placement Drive",
+  "date": ISODate("2020-10-25T00:00:00Z"),
+  "participants": [
+    {
+      "user_id": ObjectId("user1"),
+      "attended": true
+    },
+    {
+      "user_id": ObjectId("user2"),
+      "attended": false
+    }
+  ]
+},
+{
+  "_id": ObjectId("drive2"),
+  "name": "Startup Job Fair",
+  "date": ISODate("2020-10-30T00:00:00Z"),
+  "participants": [
+    {
+      "user_id": ObjectId("user1"),
+      "attended": true
+    },
+    {
+      "user_id": ObjectId("user2"),
+      "attended": true
+    }
+  ]
+},
+// ... (up to 20 company drive records)
+
+
+
+Mentor Collection:
+------------------
+{
+  "_id": ObjectId("mentor1"),
+  "name": "Mentor A",
+  "mentee_count": 25
+},
+{
+  "_id": ObjectId("mentor2"),
+  "name": "Mentor B",
+  "mentee_count": 18
+},
+// ... (up to 20 mentors)
